@@ -10,8 +10,8 @@ public class Main {
 
         System.out.println("Mini Search Engine");
         System.out.println("------------------");
-        System.out.println("1. Search in uploaded documents");
-        System.out.println("2. Search in manually entered text");
+        System.out.println("1. Search in Documents");
+        System.out.println("2. Search in Custom Text");
         System.out.print("Choose an option: ");
 
         String choice = scanner.nextLine();

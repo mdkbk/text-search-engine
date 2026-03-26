@@ -1,5 +1,5 @@
 package algorithms;
-public class BoyerMooreSearch {
+public class BoyerMoore {
 
     public int countOccurrences(String text, String pattern) {
         if (text == null || pattern == null || pattern.isEmpty() || text.isEmpty()) {

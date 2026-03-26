@@ -7,6 +7,6 @@ public class ManualTextInput {
             return null;
         }
 
-        return new Document("manual_input", text);
+        return new Document("Found", text);
     }
 }

@@ -1,5 +1,4 @@
 package engine;
-import algorithms.BoyerMooreSearch;
 import model.Document;
 import util.DocumentLoader;
 import util.TextPreprocessor;
@@ -12,7 +11,7 @@ public class SearchEngine {
 
     private DocumentLoader documentLoader = new DocumentLoader();
     private TextPreprocessor preprocessor = new TextPreprocessor();
-    private BoyerMooreSearch boyerMooreSearch = new BoyerMooreSearch();
+    private algorithms.BoyerMoore boyerMoore = new algorithms.BoyerMoore();
     private ManualTextInput manualTextInput = new ManualTextInput();
 
     public void search(String query) {
@@ -60,7 +59,7 @@ public class SearchEngine {
         for (Document doc : documents) {
             String content = preprocessor.preprocess(doc.getContent());
 
-            int substringCount = boyerMooreSearch.countOccurrences(content, processedQuery);
+            int substringCount = boyerMoore.countOccurrences(content, processedQuery);
             int wholeWordCount = countWholeWordOccurrences(content, processedQuery);
 
             if (substringCount > 0) {
@@ -83,7 +82,7 @@ public class SearchEngine {
             }
         }
 
-        System.out.println("\nMatch Results:");
+        System.out.println("\nExact Match Results:");
         if (wholeWordResults.isEmpty()) {
             System.out.println("No whole word matches found");
         } else {
