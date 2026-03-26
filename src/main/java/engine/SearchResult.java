@@ -1,4 +1,5 @@
 package engine;
+
 public class SearchResult {
     private String documentName;
     private int frequency;
