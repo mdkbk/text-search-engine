@@ -48,3 +48,4 @@ public class BoyerMoore {
         return result;
     }
 }
+

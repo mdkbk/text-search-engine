@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BM Search — Boyer-Moore Engine</title>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="/static/css/main.css"/>
-  <link rel="stylesheet" href="/static/css/components.css"/>
-  <link rel="stylesheet" href="/static/css/panels.css"/>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+    <link rel="stylesheet" href="/static/css/panels.css">
 </head>
 <body>
 <div class="app">
@@ -64,18 +64,36 @@
         </div>
       </div>
 
-      <div class="field">
-        <label>Load from docs/ folder</label>
-        <div class="row">
-          <select id="docSelect" style="flex:1">
-            <option value="">Loading documents…</option>
-          </select>
-          <button id="loadDocBtn" class="btn primary"
-                  onclick="loadDocument()"
-                  style="height:38px;padding:0 16px">Load</button>
-        </div>
-      </div>
+        <div>
+            <div class="field">
+                <label>Load from docs/ folder</label>
+                <div class="row">
+                    <select id="docSelect" style="flex:1">
+                        <option value="">Loading documents…</option>
+                    </select>
+                    <button id="loadDocBtn" class="btn primary" onclick="loadDocument()">Load</button>
+                </div>
+            </div>
 
+            <div class="field">
+                <label>Upload your file</label>
+                <div class="row upload-row">
+                    <input type="file" id="fileUpload" accept=".txt" style="display: none;">
+
+                    <button class="btn primary" onclick="document.getElementById('fileUpload').click()">
+                        Choose File
+                    </button>
+
+                    <span id="fileName" class="file-name">
+        No file chosen
+      </span>
+
+                    <button class="btn primary" onclick="uploadFile()">
+                        Upload
+                    </button>
+                </div>
+            </div>
+        </div>
       <!-- Search config -->
       <div class="card">
        <!-- <div class="card-title">// Search Config</div>-->

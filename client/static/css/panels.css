@@ -1,0 +1,294 @@
+/* ════════════════════════════════════════
+   panels.css  —  Per-tab panel styles
+   ════════════════════════════════════════ */
+
+/* ══ SEARCH PANEL ══ */
+
+.search-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 28px;
+  }
+  
+  /* Search bar */
+  .search-bar-wrap {
+    margin-top: 24px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .search-input-wrap {
+    position: relative;
+    flex: 1;
+  }
+  
+  .search-input-wrap .icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 1rem;
+    pointer-events: none;
+  }
+  
+  #mainSearch {
+    padding-left: 40px;
+    height: 48px;
+    font-size: .95rem;
+  }
+  
+  /* Results */
+  .results-section { margin-top: 28px; }
+  
+  .results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  
+  .results-title {
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  
+  .result-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    transition: border-color .2s;
+    cursor: pointer;
+  }
+  .result-item:hover { border-color: var(--accent2); }
+  
+  .result-meta {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: .65rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  
+  .result-pos {
+    color: var(--accent2);
+    font-weight: 600;
+  }
+  
+  .result-snippet {
+    font-size: .82rem;
+    line-height: 1.7;
+    color: #a0a0b8;
+    word-break: break-all;
+  }
+  
+  /* ══ FREQUENCY PANEL ══ */
+  
+  .freq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 28px;
+  }
+  
+  .freq-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: .75rem;
+  }
+  
+  .freq-word {
+    width: 100px;
+    color: var(--text);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .freq-bar-wrap {
+    flex: 1;
+    background: var(--border);
+    border-radius: 2px;
+    height: 6px;
+  }
+  
+  .freq-bar {
+    height: 6px;
+    border-radius: 2px;
+    background: var(--accent);
+    transition: width .6s cubic-bezier(.4,0,.2,1);
+  }
+  
+  .freq-count {
+    width: 30px;
+    text-align: right;
+    color: var(--muted);
+  }
+  
+  /* ══ INDEX PANEL ══ */
+  
+  .index-toolbar {
+    margin-top: 28px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .index-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: .78rem;
+  }
+  
+  .index-table th {
+    text-align: left;
+    padding: 8px 14px;
+    font-size: .62rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .index-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(30,30,46,.6);
+    vertical-align: top;
+  }
+  
+  .index-table tr:hover td { background: rgba(255,255,255,.02); }
+  
+  .pos-tag {
+    display: inline-block;
+    background: rgba(91,141,238,.15);
+    color: var(--accent2);
+    border-radius: 2px;
+    padding: 1px 6px;
+    font-size: .65rem;
+    margin: 2px 2px 2px 0;
+  }
+  
+  /* ══ DNA PANEL ══ */
+  
+  .dna-input {
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  textarea.dna-input { min-height: 120px; }
+  
+  .dna-stats {
+    margin-top: 14px;
+    font-size: .75rem;
+    color: var(--muted);
+    line-height: 1.9;
+  }
+  
+  .dna-display {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 16px;
+    font-size: .78rem;
+    line-height: 2;
+    word-break: break-all;
+    letter-spacing: .06em;
+    max-height: 260px;
+    overflow-y: auto;
+    margin-top: 12px;
+  }
+  
+  /* Nucleotide colours */
+  .dna-A { color: #ff6b6b; }
+  .dna-T { color: #ffd166; }
+  .dna-G { color: #06d6a0; }
+  .dna-C { color: #5b8dee; }
+  
+  .dna-match {
+    background: rgba(0,229,160,.25);
+    border-radius: 2px;
+    padding: 0 1px;
+    font-weight: 700;
+  }
+  
+  /* ══ VISUALIZER PANEL ══ */
+  
+  .viz-wrap {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 20px;
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  
+  .viz-step-label {
+    font-size: .65rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  
+  .viz-section-label {
+    font-size: .65rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  
+  .viz-chars {
+    display: flex;
+    gap: 3px;
+    flex-wrap: nowrap;
+    min-width: max-content;
+    margin-bottom: 6px;
+  }
+  
+  .viz-char {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    font-size: .82rem;
+    transition: all .3s;
+  }
+  
+  .viz-char.active   { background: rgba(0,229,160,.2);  border-color: var(--accent);  color: var(--accent); }
+  .viz-char.matched  { background: rgba(0,229,160,.35); border-color: var(--accent);  color: var(--accent); font-weight: 700; }
+  .viz-char.mismatch { background: rgba(255,77,109,.15);border-color: var(--danger);  color: var(--danger); }
+  .viz-char.pattern  { background: rgba(91,141,238,.15);border-color: var(--accent2); color: var(--accent2); }
+  
+  .viz-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+    align-items: center;
+  }
+  
+  .viz-info {
+    font-size: .72rem;
+    color: var(--muted);
+    margin-top: 10px;
+    min-height: 20px;
+  }
+  
+  .viz-counter {
+    font-size: .72rem;
+    color: var(--muted);
+  }

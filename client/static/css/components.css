@@ -1,0 +1,223 @@
+/* ════════════════════════════════════════
+   components.css  —  Reusable UI pieces
+   ════════════════════════════════════════ */
+
+/* ── Card ── */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  
+  /* ── Form fields ── */
+  label {
+    display: block;
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  
+  input[type="text"],
+  textarea,
+  select {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: .85rem;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(0,229,160,.12);
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 160px;
+    line-height: 1.6;
+  }
+  
+  .field {
+    margin-bottom: 16px;
+  }
+  .field:last-child {
+    margin-bottom: 0;
+  }
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+  .row .field {
+    flex: 1;
+  }
+  
+  /* ── Btn-align helper ── */
+  .btn-align {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  /* ── Checkbox group ── */
+  .checkbox-group {
+    display: flex;
+    gap: 20px;
+    font-size: .78rem;
+  }
+  
+  .check-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--text);
+  }
+  
+  /* ── Algorithm selector ── */
+  .algo-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  
+  .algo-btn {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: .72rem;
+    padding: 9px 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: all .15s;
+    line-height: 1.4;
+  }
+  .algo-btn:hover   { border-color: var(--accent2); color: var(--text); }
+  .algo-btn.selected {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(0,229,160,.06);
+  }
+  .algo-btn .algo-name { font-weight: 600; display: block; }
+  .algo-btn .algo-desc { font-size: .65rem; color: inherit; opacity: .6; }
+  
+  /* ── Buttons ── */
+  .btn {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 3px;
+    font-family: var(--mono);
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 0 24px;
+    height: 40px;
+    cursor: pointer;
+    transition: opacity .15s, transform .1s;
+    white-space: nowrap;
+  }
+  .btn:hover  { opacity: .85; }
+  .btn:active { transform: scale(.97); }
+  
+  .btn.secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .btn.secondary:hover { border-color: var(--text); color: var(--text); }
+  
+  .btn.danger { background: var(--danger); }
+  
+  .btn.full { width: 100%; }
+  .btn.sm   { padding: 4px 14px; font-size: .7rem; height: auto; }
+  
+  /* ── Stats row ── */
+  .stats-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .stat-chip {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 8px 16px;
+    font-size: .72rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .stat-chip .stat-val {
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  
+  .stat-chip .stat-label {
+    color: var(--muted);
+    letter-spacing: .05em;
+  }
+  
+  /* ── Empty state ── */
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+    font-size: .8rem;
+    line-height: 1.8;
+  }
+  .empty-state .big {
+    font-family: var(--sans);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--border);
+    display: block;
+  }
+  
+  /* ── Highlight mark ── */
+  mark {
+    background: rgba(0,229,160,.22);
+    color: var(--accent);
+    border-radius: 2px;
+    padding: 0 2px;
+    font-weight: 600;
+  }
+.upload-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.file-name {
+    color: #aaa;
+    min-width: 140px;
+}
